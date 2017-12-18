@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script type="text/javascript" src='js/jquery-1.11.0.js'></script>
+	<style type="text/css">
+	video{
+		position: absolute;
+		opacity: 0.6;
+	}
+	
+	</style>
+</head>
+<body ng-app="app">
+<!-- 背景视频 -->
+<!-- <video src='img-zh/card.mp4' autoplay='true' width="1263px" height="700px">
+</video> -->
+<!-- 容器 -->
+	<div id="sign">
+	<!-- 次容器 -->
+	<div id="KNOW">
+	<div id="know">	
+	<!-- 第一块 -->
+	<ul class="zh">
+		<li><img src="img-zh/zh.png"></li>
+		<li>与世界分享你的知识、经验和见解</li>
+	</ul>
+	<!-- 第二块 -->
+	<ul class="login-registration">
+		<div class="login-center">
+		<a href="###">注册</a>
+		<a href="###">登录</a>
+		<p></p>
+		</div>
+	</ul>
+	<!-- 密码 -->
+	<div id="ling">
+
+	<div id="TAB-zc">
+	<ul id="tab-zc">
+	<div class="name"><input placeholder="姓名"></div>
+	<div class="phone"><input placeholder="手机号"></div>
+	<div class="password"><input type="password" name="password" placeholder="密码(不少与6位)"></div>
+	</ul>
+	<!-- 注册 -->
+	<button class="zh-b"><a href="###">注册知乎</a></button>
+	</div>
+	<!-- tab 登入 -->
+	<div id="TAB-dl">
+	<ul id="tab-zc">
+	<div class="name"><input placeholder="账户"></div>
+	<div class="password"><input type="password" name="password" placeholder="密码"></div>
+	</ul>
+	<!--登入 -->
+	<button class="zh-b"><a href="wod.html">登录</a></button>
+	<div class="yanzh">
+		<a href="###">手机验证码登录</a>
+		<a href="###">无法登录？</a>
+	</div>
+	<div class="yanzh-2">
+		<a href="">二维码登录</a>.
+		<a href="">社交帐号登录</a>
+	</div>
+	</div>
+
+
+	<!-- 协议 -->
+	<p class="agreement">
+		点击「注册」按钮，即代表你同意
+		<a href="">《知乎协议》</a>
+	</p>
+	<div class="mechanism"><a href="">注册机构</a></div>
+	</div>
+	<img class="img-sj" src="img-zh/sm.png">
+<!-- 第tab块 -->
+<div id='tab-zh'>
+	<div id="code">
+	<img class="img-sm" src="img-zh/ewm.png">
+	<p class="e-app">打开最新 <a href="">知乎</a> <a href="">App</a></p>
+	<p class="e-sm">在「更多」页面右上角打开扫一扫</p>
+	<p class="e-dl"><a href="###">使用密码登录</a></p>
+	</div>
+	</div>
+
+</div>
+	<!-- 尾部 -->
+	<div class="software-app">
+	<button class="software">下载知乎  App</button>
+	</div>
+	<div class="software-tab">
+	<button class="software">关闭二维码</button>
+	</div>
+	<div class="software-img">
+	<img src="img-zh/ewm-2.png">
+	<p></p>
+	</div>
+</div>
+
+
+
+	<p class="column-a">
+	<a href="">知乎专栏</a> · <a href="">知乎圆桌</a> · <a href="">发现</a> · <a href="">移动应用</a> · <a href="">联系我们</a> · <a href="">来知乎工作</a></p>
+	<p class="column-b">
+	© 2017 知乎 · <a href="">京 ICP 证 110745 号</a> · 京公网安备 11010802010035 号 · <a href="">出版物经营许可证</a></p>
+	<p class="column-c">
+	<a href="">侵权举报</a> · <a href="">网上有害信息举报专区</a> · <a href="">儿童色情信息举报专区</a> · 违法和不良信息举报：010-82716601</p>
+	<div id="sincerity">
+		<a class="sincerity-1ink" href=""><img src="img-zh/cx.png"></a>
+	</div>
+<button id="weix">
+<img src="img-zh/weix.png">
+</button>
+</div>
+<script type="text/javascript">
+	// tab-注册
+	$('.login-center>a:eq(0)').click(function(){		
+		$('.login-center>p').css({left:'92px',display:'block'});
+		$('#tab-zh').css('display','none');
+		$('#ling').css('display','block');
+		$('#TAB-zc').css('display','block');
+		$('#TAB-dl').css('display','none');
+		$('.img-sj').css({opacity:'0',transition:'0s',marginLeft:'-420px'});
+		$('.agreement').css('display','black');
+	})
+	// tab-登录
+	$('.login-center>a:eq(1)').click(function(){		
+		$('.login-center>p').css({left:'164px',display:'block'});
+		$('#tab-zh').css('display','block');
+		$('#ling').css('display','none');
+		$('.img-sj').css({marginLeft:'-450px',opacity:'1',transition:'0.5s'});
+	})
+	$('.e-dl>a').click(function(){
+		$('#tab-zh').css('display','none');
+		$('#ling').css('display','block');
+		$('#TAB-zc').css('display','none');
+		$('#TAB-dl').css('display','block');
+		$('.img-sj').css({opacity:'0',transition:'0s',marginLeft:'-420px'})
+	})
+	$('#code').mouseenter(function(e){
+		$('.img-sj').css({marginLeft:'-450px',opacity:'1',transition:'0.5s'});
+	})
+	$('#code').mouseleave(function(){
+		$('.img-sj').css({marginLeft:'-420px',opacity:'0',transition:'0.5s'});
+	})
+	// 注册-tab登录
+	$('.zh-b').click(function(){		
+		$('#TAB-zc').css('display','none');
+		$('#TAB-dl').css('display','block');
+		$('.agreement').css('display','none');
+		
+	})
+	// app-tab
+	$('.software-app').click(function(){		
+		$('.software-app').css('display','none');
+		$('.software-tab').css('display','block');
+		$('.software-img').css({top:'220px',opacity:'0',display:'block'});
+		setTimeout(function(){
+			$('.software-img').css({top:'190px',opacity:'1',transition:'0.3s'})
+		},200)
+	})
+	$('.software-tab').click(function(){		
+		$('.software-tab').css('display','none');
+		$('.software-app').css('display','block');
+		$('.software-img').css({top:'220px',opacity:'0',transition:'0.3s'});
+		setTimeout(function(){
+			$('.software-img').css('display','none')
+		},300)
+	})
+	
+</script>
+</body>
+</html
